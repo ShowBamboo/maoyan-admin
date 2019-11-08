@@ -1,0 +1,45 @@
+<div class="wrapper-page" style="margin: 4.5% auto">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-12 col-xs-12">
+                <div class="card">
+                    <div class="card-header border-bottom text-center">
+                        <h4 class="card-title" style="color: #e22a6f;">Sign In</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal m-t-20">
+                            <div class="form-group">
+                                <input class="form-control" type="text" required="" placeholder="Username"
+                                    name="username" id="username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="password" required="" placeholder="Password"
+                                    name="password" id="password">
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="form-group text-center m-t-20">
+                                <a class="btn btn-common btn-block" id="btn-login">Log In</a>
+                            </div>
+                            <div class="form-group">
+                                <div class="float-right">
+                                    <a href="#/reset" class="text-muted" id="reset"><i class="lni-lock"></i>
+                                        Forgot your password?</a>
+                                </div>
+                                <div class="float-left">
+                                    <a href="#/register" class="text-muted" id="register"><i class="lni-user"></i>
+                                        Create an
+                                        account</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

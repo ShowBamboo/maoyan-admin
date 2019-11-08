@@ -1,0 +1,207 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <button type="button" class="btn btn-outline-success" id="btn-add"><i
+                        class="lni-add-files"></i>添加</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <div id="datatable_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="dataTables_length" id="datatable_length">
+                                    <label>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">每页数量 </font>
+                                        </font>
+                                        <select name="datatable_length" aria-controls="datatable"
+                                            class="form-control form-control-sm" id="page-count">
+                                            <option value="3">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">3</font>
+                                                </font>
+                                            </option>
+                                            <option value="6">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">6</font>
+                                                </font>
+                                            </option>
+                                            <option value="9">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">9</font>
+                                                </font>
+                                            </option>
+                                        </select>
+                                        <!-- <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;"> 参赛作品</font>
+                                        </font> -->
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div id="datatable_filter" class="dataTables_filter">
+                                    <label>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">搜索：</font>
+                                        </font>
+                                        <input type="search" id="search" class="form-control form-control-sm"
+                                            placeholder="请输入搜索内容后回车" aria-controls="datatable">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {{if list.length === 0}}
+                                <table class="table table-bordered dataTable no-footer" role="grid"
+                                    aria-describedby="datatable_info">暂无数据</table>
+                                {{else}}
+                                <table id="datatable" class="table table-bordered dataTable no-footer" role="grid"
+                                    aria-describedby="datatable_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th>#</th>
+                                            <th tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                aria-label="Name: activate to sort column ascending"
+                                                style="max-width: 65px;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">电影海报</font>
+                                                </font>
+                                            </th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" aria-label="Position: activate to sort column descending"
+                                                style="max-width: 130px;" aria-sort="ascending">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">电影名称</font>
+                                                </font>
+                                            </th>
+                                            <th class="sorting" id="score-sort" tabindex="0" aria-controls="datatable"
+                                                rowspan="1" colspan="1"
+                                                aria-label="Office: activate to sort column ascending"
+                                                style="max-width: 58px;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">观众评分</font>
+                                                </font>
+                                            </th>
+                                            <th tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                aria-label="Age: activate to sort column ascending"
+                                                style="width: 150px;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">电影主演</font>
+                                                </font>
+                                            </th>
+                                            <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" aria-label="Start date: activate to sort column ascending"
+                                                style="max-width: 150px;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">放映信息</font>
+                                                </font>
+                                            </th>
+                                            <th tabindex="0" aria-controls="datatable" rowspan="1" colspan="1"
+                                                aria-label="Start date: activate to sort column ascending"
+                                                style="max-width: 150px;">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">操作</font>
+                                                </font>
+                                            </th>
+                                    </thead>
+                                    <tbody>
+                                        {{each list}}
+                                        <tr role="row" class="odd">
+                                            <td>{{$index + 1}}</td>
+                                            <td><img style="width:60px; height:90px;"
+                                                    src="{{$value.poster ? 'http://10.9.49.206:3000/uploads/'+ $value.poster : 'http://placehold.it/60x90' }}"
+                                                    alt=""></td>
+                                            <td class="">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{$value.movieName}}</font>
+                                                </font>
+                                            </td>
+                                            <td class="sorting_1">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{$value.score}}</font>
+                                                </font>
+                                            </td>
+                                            <td>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{$value.actor}}</font>
+                                                </font>
+                                            </td>
+                                            <td>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{$value.showInfo}}</font>
+                                                </font>
+                                            </td>
+                                            <td>
+                                                <button type="button" data-id="{{$value._id}}"
+                                                    class="btn btn-outline-primary btn-update"><i
+                                                        class="lni-pencil-alt"></i>修改</button>
+                                                <button type="button" data-id="{{$value._id}}"
+                                                    data-img="{{$value.poster}}"
+                                                    class="btn btn-outline-danger btn-delete"><i
+                                                        class="lni-cross-circle"></i>删除</button>
+                                            </td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                                {{/if}}
+                            </div>
+                        </div>
+                        {{if list.length > 0 && from === 'list'}}
+                        <div class="row">
+                            <div class="col-sm-12 col-md-5">
+                                <div class="dataTables_info" id="datatable_info" role="status" aria-live="polite">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            显示 <span style="color: red;">{{total}}</span> 条电影数据中的 <span
+                                                style="color: red;">{{start+1}}</span> 到
+                                            <span style="color: red;">{{start+count}}</span></font>
+                                    </font>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-7" id="box-footer">
+                                <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button page-item previous " id="datatable_previous">
+                                            <a href="javascript:void(0)" aria-controls="datatable" data-dt-idx="0"
+                                                tabindex="0" class="page-link">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">上一页</font>
+                                                </font>
+                                            </a>
+                                        </li>
+                                        {{each pageCount}}
+                                        {{if currentPage === $value}}
+                                        <li class="paginate_button page-item active page-number">
+                                            {{else}}
+                                        <li class="paginate_button page-item page-number">
+                                            {{/if}}
+                                            <a href="javascript:void(0)" aria-controls="datatable"
+                                                data-dt-idx="{{$value}}" tabindex="0" class="page-link">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">{{$value}}</font>
+                                                </font>
+                                            </a>
+                                        </li>
+                                        {{/each}}
+                                        <li class="paginate_button page-item next" id="datatable_next">
+                                            <a href="javascript:void(0)" aria-controls="datatable" data-dt-idx="7"
+                                                tabindex="0" class="page-link">
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">下一页</font>
+                                                </font>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

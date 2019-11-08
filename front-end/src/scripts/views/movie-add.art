@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h4 class="card-title">添加电影</h4>
+            </div>
+            <div class="card-body">
+                <form class="forms-sample" enctype="multipart/form-data" method="POST" action="/api/movies">
+                    <div class="form-group poster" style="position: relative;">
+                        <label for="poster" style="font-weight: bold;">电影海报</label>
+                        <input type="file" class="form-control" id="poster" name="poster" placeholder="请选择电影海报">
+                        <div class="email-right" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/valid.png" alt="">
+                        </div>
+                        <div class="email-error" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/invalid.png" alt="">
+                        </div>
+                    </div>
+                    <div class="form-group movieName" style="position: relative;">
+                        <label for="movieName" style="font-weight: bold;">电影名称</label>
+                        <input type="text" class="form-control" id="movieName" name="movieName" placeholder="请输入电影名称">
+                        <div class="email-right" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/valid.png" alt="">
+                        </div>
+                        <div class="email-error" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/invalid.png" alt="">
+                        </div>
+                    </div>
+                    <div class="form-group score" style="position: relative;">
+                        <label for="score" style="font-weight: bold;">观众评分</label>
+                        <input type="text" class="form-control" id="score" name="score" placeholder="请输入观众评分">
+                        <div class="email-right" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/valid.png" alt="">
+                        </div>
+                        <div class="email-error" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/invalid.png" alt="">
+                        </div>
+                    </div>
+                    <div class="form-group actor" style="position: relative;">
+                        <label for="actor" style="font-weight: bold;">电影主演</label>
+                        <input type="text" class="form-control" id="actor" name="actor" placeholder="请输入电影主演">
+                        <div class="email-right" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/valid.png" alt="">
+                        </div>
+                        <div class="email-error" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/invalid.png" alt="">
+                        </div>
+                    </div>
+                    <div class="form-group showInfo" style="position: relative;">
+                        <label for="showInfo" style="font-weight: bold;">放映信息</label>
+                        <input type="text" class="form-control" id="showInfo" name="showInfo" placeholder="请输入放映信息">
+                        <div class="email-right" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/valid.png" alt="">
+                        </div>
+                        <div class="email-error" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/invalid.png" alt="">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary btn-rounded" id="btn-back">取消</button>
+                    <button type="submit" disabled class="btn btn-outline-success btn-rounded" style="float: right;"
+                        id="btn-add">提交</button>
+                    <button type="button" class="btn btn-outline-warning btn-rounded" id="btn-check"
+                        style="float: right; margin-right: 10px;">点我确定无误后再提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

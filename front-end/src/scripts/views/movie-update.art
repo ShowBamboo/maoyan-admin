@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="card">
+            <div class="card-header border-bottom">
+                <h4 class="card-title">修改电影</h4>
+            </div>
+            <div class="card-body">
+                <form class="forms-sample" enctype="multipart/form-data">
+                    <div class="form-group poster" style="position: relative;">
+                        <label for="poster" style="font-weight: bold;">电影海报<span
+                                style="color: red;font-size: 12px;">(不修改则无需选择)</span></label>
+                        <div><img style="width:60px; height:90px;"
+                                src="{{item.poster?'http://10.9.49.206:3000/uploads/'+ item.poster:'http://placehold.it/60x90'}}"
+                                alt=""></div>
+                        <input type="file" class="form-control" id="poster" name="poster" placeholder="请选择电影海报">
+                        <div class="email-right" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/valid.png" alt="">
+                        </div>
+                        <div class="email-error" style="position: absolute;top: 40px;right: 15px;display: none;">
+                            <img src="../../assets/img/invalid.png" alt="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="movieName" style="font-weight: bold;">电影名称</label>
+                        <input type="text" value="{{item.movieName}}" class="form-control" id="movieName"
+                            name="movieName" placeholder="请输入电影名称">
+                    </div>
+                    <div class="form-group">
+                        <label for="score" style="font-weight: bold;">观众评分</label>
+                        <input type="text" value="{{item.score}}" class="form-control" id="score" name="score"
+                            placeholder="请输入观众评分">
+                    </div>
+                    <div class="form-group">
+                        <label for="actor" style="font-weight: bold;">电影主演</label>
+                        <input type="text" value="{{item.actor}}" class="form-control" id="actor" name="actor"
+                            placeholder="请输入电影主演">
+                    </div>
+                    <div class="form-group">
+                        <label for="showInfo" style="font-weight: bold;">放映信息</label>
+                        <input type="text" value="{{item.showInfo}}" class="form-control" id="showInfo" name="showInfo"
+                            placeholder="请输入放映信息">
+                    </div>
+                    <button type="button" class="btn btn-outline-secondary btn-rounded" id="update-back">取消</button>
+                    <button type="submit" class="btn btn-outline-success btn-rounded" style="float: right;"
+                        id="btn-update">提交</button>
+                    <input type="hidden" name="id" value="{{item._id}}">
+                    <input type="hidden" name="tempPoster" value="{{item.poster}}">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

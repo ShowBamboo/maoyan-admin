@@ -1,0 +1,62 @@
+<div class="wrapper-page" style="margin: 1.5% auto">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-12 col-xs-12">
+                <div class="card">
+                    <div class="card-header border-bottom text-center">
+                        <h4 class="card-title" style="color:#e22a6f;">Register</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-horizontal m-t-20">
+                            <div class="form-group email" style="position: relative;">
+                                <input class="form-control" id="email" type="email" required="" placeholder="Email"
+                                    name="email">
+                                <div class="email-right" style="position: absolute;top: 6px;right: 11px;display: none;">
+                                    <img src="../../assets/img/valid.png" alt="">
+                                </div>
+                                <div class="email-error" style="position: absolute;top: 6px;right: 11px;display: none;">
+                                    <img src="../../assets/img/invalid.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group username" style="position: relative;">
+                                <input class="form-control" id="username" type="text" required="" placeholder="Username"
+                                    name="username">
+                                <div class="email-right" style="position: absolute;top: 6px;right: 11px;display: none;">
+                                    <img src="../../assets/img/valid.png" alt="">
+                                </div>
+                                <div class="email-error" style="position: absolute;top: 6px;right: 11px;display: none;">
+                                    <img src="../../assets/img/invalid.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group password" style="position: relative;">
+                                <input class="form-control" id="password" type="password" required=""
+                                    placeholder="Password" name="password">
+                                <div class="email-right" style="position: absolute;top: 6px;right: 11px;display: none;">
+                                    <img src="../../assets/img/valid.png" alt="">
+                                </div>
+                                <div class="email-error" style="position: absolute;top: 6px;right: 11px;display: none;">
+                                    <img src="../../assets/img/invalid.png" alt="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">I accept <a href="#"
+                                            class="text-muted">Terms and Conditions</a></label>
+                                </div>
+                            </div>
+                            <div class="form-group text-center m-t-20">
+                                <a class="btn btn-common btn-block" id="btn-register">Register</a>
+                            </div>
+                            <div class="form-group m-t-10 mb-0">
+                                <div class="text-center">
+                                    <a href="#/login" class="text-muted" id="login">Already have account?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
