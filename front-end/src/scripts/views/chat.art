@@ -1,0 +1,7 @@
+<h1>gp 交流区</h1>
+<div id="content" name="name" style="overflow-y: scroll; width: 400px; height: 300px; border: solid 1px #000"></div>
+<br />
+<div>
+    <input type="text" id="msg" style="width: 200px;">
+</div>
+<button id="submit">提交</button>

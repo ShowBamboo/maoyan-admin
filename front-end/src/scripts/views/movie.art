@@ -111,7 +111,7 @@
                                         <tr role="row" class="odd">
                                             <td>{{$index + 1}}</td>
                                             <td><img style="width:60px; height:90px;"
-                                                    src="{{$value.poster ? 'http://10.9.49.206:3000/uploads/'+ $value.poster : 'http://placehold.it/60x90' }}"
+                                                    src="{{$value.poster ? 'http://localhost:3000/uploads/'+ $value.poster : 'http://placehold.it/60x90' }}"
                                                     alt=""></td>
                                             <td class="">
                                                 <font style="vertical-align: inherit;">

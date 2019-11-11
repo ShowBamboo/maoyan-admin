@@ -24,6 +24,7 @@
         "better-scroll": "^1.15.2",
         "lodash": "^4.17.15",
         "sme-router": "^0.12.8",
+        "socket.io": "^2.3.0",
         "store": "^2.0.12",
         "string-loader": "0.0.1",
         "url-loader": "^2.2.0"

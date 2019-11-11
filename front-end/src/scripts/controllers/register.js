@@ -76,7 +76,7 @@ export const register = (req, res, next) => {
             setTimeout(() => {
                 // location.hash = '/login'
                 res.go('/login')
-            }, 3000);
+            }, 2000);
         } else {
             $('.card-title').html(result.data.message)
             $('#username').val('')

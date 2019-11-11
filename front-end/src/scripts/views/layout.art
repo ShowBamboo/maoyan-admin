@@ -301,16 +301,16 @@
                 </ul> -->
             </li>
             <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="#">
+                <a class="dropdown-toggle" href="#/chat">
                     <span class="icon-holder">
                         <i class="lni-layers"></i>
                     </span>
-                    <span class="title">UI Elements</span>
+                    <span class="title">Chat Room</span>
                     <span class="arrow">
                         <i class="lni-chevron-right"></i>
                     </span>
                 </a>
-                <ul class="dropdown-menu sub-down">
+                <!-- <ul class="dropdown-menu sub-down">
                     <li>
                         <a href="alert.html">Alert</a>
                     </li>
@@ -329,7 +329,7 @@
                     <li>
                         <a href="typography.html">Typography</a>
                     </li>
-                </ul>
+                </ul> -->
             </li>
             <li class="nav-item dropdown">
                 <a class="dropdown-toggle" href="#">

@@ -20,6 +20,10 @@ import {
     reset
 } from '../controllers/reset'
 
+import {
+    chat
+} from "../controllers/chat";
+
 const router = new SMERouter('container-fluid')
 
 router.use((req) => {
@@ -47,6 +51,10 @@ router.use((req) => {
         'reset': {
             level1: '后台管理系统',
             level2: '重置密码'
+        },
+        'chat': {
+            level1: '后套管理系统',
+            level2: '聊天室'
         }
     }
     let TitleMap = {
@@ -64,6 +72,9 @@ router.use((req) => {
         },
         'reset': {
             title: '重置密码'
+        },
+        'chat': {
+            title: '聊天室'
         }
     }
     let info = {
@@ -90,6 +101,7 @@ router.route('/movie_add', movie.add)
 router.route('/movie_update', movie.update)
 router.route('/movie_list/:page', movie.list)
 router.route('/reset', reset)
+router.route('/chat', chat)
 
 //重定向路由， 初始化为home
 router.route('*', (req, res, next) => {

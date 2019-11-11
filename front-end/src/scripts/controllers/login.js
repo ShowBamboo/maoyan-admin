@@ -42,7 +42,7 @@ export const login = (req, res, next) => {
                 // location.hash = '/home'
                 res.go('/home')
                 window.location.reload()
-            }, 3000);
+            }, 2000);
         } else {
             $('.card-title').html(result.data.message)
             $('#username').val('')
