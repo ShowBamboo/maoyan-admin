@@ -22,7 +22,7 @@
         "art-template": "^4.13.2",
         "art-template-loader": "^1.4.3",
         "better-scroll": "^1.15.2",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "sme-router": "^0.12.8",
         "socket.io": "^2.3.0",
         "store": "^2.0.12",
